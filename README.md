@@ -49,8 +49,8 @@
 
 
 
-Screenshot
-Placeholder: https://example.com/screenshot.png
+## Screenshot
+![ScreenShot](  https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/src/Screenshot.png?raw=true)
 
 
 
