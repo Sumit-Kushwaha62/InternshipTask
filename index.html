@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevate Labs — Landing</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Simple responsive landing page using HTML & CSS with Flexbox, Grid, and media queries." />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#">
+        <span class="logo__mark">▲</span>
+        <span class="logo__text">Elevate Labs</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav__list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a class="btn btn--sm" href="#cta">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>Build responsive pages faster</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minus minima, quo ad libero ex ab ea sapiente obcaecati quia! Numquam asperiores cumque similique ullam quo dolor officia mollitia obcaecati ratione. Voluptates corporis ea repellat assumenda rem soluta, nisi quo praesentium deserunt tempore pariatur, totam accusantium, possimus reiciendis facilis architecto.</p>
+          <a id="cta" class="btn btn--lg" href="#features">Explore Features</a>
+        </div>
+        <div class="hero__art"  role="img" aria-label="Abstract gradient illustration"></div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container features__grid">
+        <article class="card">
+          <h3>Semantic HTML</h3>
+          <p>Accessible structure with clear tags like header, main, section, and footer.</p>
+        </article>
+        <article class="card">
+          <h3>Flexbox</h3>
+          <p>One‑dimensional layouts for headers, nav bars, and content alignment.</p>
+        </article>
+        <article class="card">
+          <h3>Grid</h3>
+          <p>Two‑dimensional, responsive layouts that adapt at any breakpoint.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about__inner">
+        <h2>About this landing page</h2>
+        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium facilis, sint error iusto amet quisquam quo voluptates fuga tempora minus nemo commodi delectus quia consequuntur quod cupiditate possimus. Aspernatur, recusandae!This page demonstrates a minimal, responsive structure using only HTML and CSS. Resize the window to see the layout adapt.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 Elevate Labs</p>
+      <ul class="social">
+        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="GitHub">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile nav toggle
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('is-open');
+      });
+    }
+  </script>
+</body>
+</html>
