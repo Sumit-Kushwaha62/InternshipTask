@@ -32,4 +32,4 @@
 - Implemented modal show/hide logic purely with CSS classes and JavaScript toggling without relying on jQuery or Bootstrap JS.
 
 ## ScreenSort
-![screensort]()
+![screensort](https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/Task_2/images/Screenshot%20(220).png?raw=true)
