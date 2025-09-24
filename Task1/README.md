@@ -50,7 +50,7 @@
 
 
 ## Screenshot
-![ScreenShot](  https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/src/Screenshot.png?raw=true)
+![ScreenShot]( https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/Task1/src/Screenshot.png?raw=true)
 
 ### Task One
 
