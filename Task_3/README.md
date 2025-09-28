@@ -8,17 +8,25 @@
 
 ## Project Setup:
 In‑memory array for data persistence during runtime only
-# 1) Create project folder and enter it
+### 1) Create project folder and enter it
+```
 mkdir Task_3 && cd Task_3  
+```
 
-# 2) Initialize package.json
-npm init -y  
+### 2) Initialize package.json
+```
+npm init -y 
+``` 
 
-# 3) Install Express locally
+### 3) Install Express locally
+```
 npm install express  
+```
 
-# 4) Install nodemon for dev restarts
+### 4) Install nodemon for dev restarts
+```
 npm install -D nodemon  
+```
 
 
 ## Approach taken
@@ -32,7 +40,7 @@ npm install -D nodemon
 
 - Tested endpoints in Postman following the brief’s testing step and verified behavior across create, read, update, and delete flows.
 
-## Testing guide
+## Testing 
 - Start the server and test with Postman using the listed endpoints and example payloads to validate CRUD behavior.
 
 - Suggested flow: POST a book, GET all to confirm presence, PUT to update fields, then DELETE and GET again to confirm removal as part of manual verification.
