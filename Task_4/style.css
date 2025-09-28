@@ -1,0 +1,273 @@
+/* Base / Desktop-first styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --container-max: 1100px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --radius: 12px;
+  --brand: #2f66f2;
+  --text: #1e1e1e;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --bg-alt: #f6f7fb;
+  --border: #e5e7eb;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden; /* prevent horizontal scrollbars */
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
+
+/* Header & navigation */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: var(--space-2);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+}
+
+.site-nav a:hover {
+  color: var(--brand);
+}
+
+/* Hamburger (hidden on desktop) */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 2.8vw, 2.75rem);
+  line-height: 1.2;
+  margin: 0 0 var(--space-2);
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 0 0 var(--space-3);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.hero-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+/* Content area */
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* sidebar on right */
+  gap: var(--space-4);
+  padding-block: clamp(1.5rem, 3vw, 3rem);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.card h3 {
+  margin: 0 0 var(--space-1);
+  font-size: 1.125rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.sidebar {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+}
+
+.site-footer .container {
+  padding-block: var(--space-3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Show hamburger, stack nav vertically, and toggle via checkbox */
+  .hamburger {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    inset: 64px 0 auto 0; /* under sticky header */
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-2) var(--space-2) var(--space-3);
+    display: none; /* hidden by default */
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  /* Toggle menu when checkbox is checked */
+  .nav-toggle:checked ~ .site-nav {
+    display: block;
+  }
+
+  /* Layout stacks */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Type and spacing tweaks */
+  .header-inner {
+    min-height: 56px;
+  }
+
+  .btn {
+    padding: 0.65rem 0.9rem;
+  }
+}
+
+/* Small devices: additional guards */
+@media (max-width: 420px) {
+  .logo {
+    font-size: 1.125rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}
