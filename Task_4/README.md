@@ -24,10 +24,12 @@
 - Images scale fluidly and maintain aspect ratio.
 - Verify at intermediate widths that grids reduce column counts smoothly.
 
-Approach
+## Approach
 - Started with a desktop layout and added the viewport meta tag to enable correct scaling on mobile.
 - Identified fixed-width and multi-column areas, then introduced media queries at 1024px and 768px to reduce columns and stack sections.
 - Implemented a CSS-only hamburger to collapse the navigation at 768px and reorganized layout to a single column.
 - Ensured images scale within their containers, removed horizontal overflow, and verified everything in the device toolbar.
 
 
+## Screenshot
+![screenshot](https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/Task_4/images/Screenshot%20(221).png?raw=true)
