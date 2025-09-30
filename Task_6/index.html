@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form</title>
+  <meta name="description" content="Contact form with client-side validation for Name, Email, and Message." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="section">
+      <h1>Contact</h1>
+      <p>Fill the form below for getting information about Elevate Labs!</p>
+
+      <form id="contactForm" novalidate>
+        <!-- Name -->
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="2"
+            maxlength="80"
+            autocomplete="name"
+            aria-describedby="nameError"
+            aria-invalid="false"
+          />
+          <small id="nameError" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            inputmode="email"
+            autocomplete="email"
+            aria-describedby="emailError"
+            aria-invalid="false"
+          />
+          <small id="emailError" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <!-- Message -->
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            minlength="10"
+            maxlength="2000"
+            aria-describedby="messageError"
+            aria-invalid="false"
+          ></textarea>
+          <small id="messageError" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+          <button type="submit" id="submitBtn">Send</button>
+          <button type="reset" id="resetBtn" class="secondary">Reset</button>
+          <span id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+
+      <div id="successPanel" class="success hidden" role="status" aria-live="polite">
+        Thanks, your message passed validation and is ready to be sent in a real app. No message was sent here.
+      </div>
+    </section>
+  </main>
+
+ <script src="script.js"></script>
+</body>
+</html>
