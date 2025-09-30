@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-- [View Live](google.com)
+- [View Live](https://sumit-kushwaha62.github.io/hostedTask/)
 
 ## Screenshots
 
