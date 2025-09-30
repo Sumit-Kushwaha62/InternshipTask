@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-- URL: Google.com (format: <username>.github.io) after enabling Pages on the main branch root. [attached_file:1]
+- [View Live](google.com)
 
 ## Screenshots
 
@@ -26,7 +26,7 @@
 
 ### 2) Deployment to GitHub Pages  
 - Pushed files to a public repo and enabled Pages from Settings → Pages with Source: main and Folder: root.
-- Opened the user site at the pattern `<username>.github.io` once the build finished. 
+- Opened the user site at the pattern `<Sumit-Kushwaha62>.github.io` once the build finished. 
 
 ## Getting Started 
 - Open `index.html` in a browser to preview locally with no extra tooling required. 
@@ -36,10 +36,10 @@
 
 ## Deploying to GitHub Pages
 
-1) Create a public repo named `<username>.github.io`.  
+1) Create a public repo named `<Sumit-Kushwaha62>.github.io`.  
 2) Add the project files to the repo root, commit, and push to `main`.  
 3) In GitHub → Settings → Pages, set Source: “Deploy from a branch”, Branch: `main`, Folder: `/ (root)`.  
-4) Wait a few minutes and then open `<username>.github.io` to view the live site.  
+4) Wait a few minutes and then open `<Sumit-Kushwaha62>.github.io` to view the live site.  
 5) Update by pushing new commits; Pages redeploys automatically. 
 
 
