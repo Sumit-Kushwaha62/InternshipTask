@@ -4,7 +4,8 @@ This project implements a contact form with client‑side validation for Name, E
 
 
 ## Screenshots
-- ![Form – Empty](screenshots/form-empty.png) 
+- ![Form ](https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/Task_6/assets/Screenshot%20(222).png?raw=true) 
+- ![Form ](https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/Task_6/assets/Screenshot%20(223).png?raw=true) 
 
 ## Tech Stack
 

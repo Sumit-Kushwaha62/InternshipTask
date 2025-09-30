@@ -6,8 +6,8 @@
 
 ## Screenshots
 
-- ![Home](screenshots/home.png)
-- ![Home](screenshots/home.png)
+- ![Home](https://github.com/Sumit-Kushwaha62/InternshipTask/blob/main/Task_5/images/Screenshot%20(224).png?raw=true)
+
 
 
 
